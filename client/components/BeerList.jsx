@@ -16,6 +16,7 @@ class BeerList extends React.Component {
         for (let i = 0; i < allBeerInfo.length; i++) {
           beerNames.push(allBeerInfo[i].name)
         }
+        beerNames.sort()
         this.setState({
           beers: beerNames
         })
@@ -26,8 +27,8 @@ class BeerList extends React.Component {
     return (
       <React.Fragment>
         <ul>
-          {this.state.beers.map(beer => (
-            <li key={beer}><Link>{beer}</Link></li>
+          {this.state.beers.map((beer, i) => (
+            <li key={i}><Link>{beer}</Link></li>
           ))}
         </ul>
       </React.Fragment>

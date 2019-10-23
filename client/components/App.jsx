@@ -10,7 +10,6 @@ const App = () => {
       <Header />
       <BeerList />
 
-      <Route component={BeerList} />
     </Router>
   )
 }
