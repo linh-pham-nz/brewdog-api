@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Header from './Header'
 import { getAllBeers } from '../apiClient'
 
 class App extends React.Component {
@@ -23,14 +24,14 @@ class App extends React.Component {
 
   render () {
     return (
-      <div className='app'>
-        <h1>BREWDOG BEER LIST</h1>
+      <React.Fragment>
+        <Header />
         <ul>
           {this.state.beers.map(beer => (
             <li key={beer}>{beer}</li>
           ))}
         </ul>
-      </div>
+      </React.Fragment>
     )
   }
 }
