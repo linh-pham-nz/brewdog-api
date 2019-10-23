@@ -1,26 +1,33 @@
 import React from 'react'
 
-import { getFruits } from '../apiClient'
+import { getAllBeers } from '../apiClient'
 
 class App extends React.Component {
   state = {
-    fruits: []
+    beers: []
   }
 
   componentDidMount () {
-    getFruits()
-      .then(fruits => {
-        this.setState({fruits})
+    getAllBeers()
+      .then(result => {
+        const allBeerInfo = result.body
+        const beerNames = []
+        for (let i = 0; i < allBeerInfo.length; i++) {
+          beerNames.push(allBeerInfo[i].name)
+        }
+        this.setState({
+          beers: beerNames
+        })
       })
   }
 
   render () {
     return (
       <div className='app'>
-        <h1>BREWDOG</h1>
+        <h1>BREWDOG BEER LIST</h1>
         <ul>
-          {this.state.fruits.map(fruit => (
-            <li key={fruit}>{fruit}</li>
+          {this.state.beers.map(beer => (
+            <li key={beer}>{beer}</li>
           ))}
         </ul>
       </div>
