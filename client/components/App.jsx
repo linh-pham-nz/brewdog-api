@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter as Router, Route, Link } from 'react-router-dom'
+import { HashRouter as Router, Route } from 'react-router-dom'
 
 import Header from './Header'
 import BeerList from './BeerList'
@@ -7,8 +7,8 @@ import BeerList from './BeerList'
 const App = () => {
   return (
     <Router>
-      <Header />
-      <BeerList />
+      <Route path='/' component={Header} />
+      <Route exact path='/' component={BeerList} />
 
     </Router>
   )
