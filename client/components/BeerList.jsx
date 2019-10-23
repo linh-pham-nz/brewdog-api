@@ -3,37 +3,48 @@ import { Link } from 'react-router-dom'
 
 import { getAllBeers } from '../apiClient'
 
+// getAllBeers()
+
 class BeerList extends React.Component {
   state = {
-    beers: []
+    beerName: '',
+    beerId: ''
   }
 
   componentDidMount () {
     getAllBeers()
       .then(result => {
         const allBeerInfo = result.body
-        const beerNames = []
+        const beersIdAndName = []
         for (let i = 0; i < allBeerInfo.length; i++) {
-          beerNames.push(allBeerInfo[i].name)
+          beersIdAndName.push({id: allBeerInfo[i].id, name: allBeerInfo[i].name})
         }
-        beerNames.sort()
+        console.log(beersIdAndName)
+        // console.log(beersIdAndName['name'])
         this.setState({
-          beers: beerNames
+          beerName: beersIdAndName.name,
+          beerId: beersIdAndName.id
         })
+        // console.log(this.state.beerName)
       })
   }
 
   render () {
+    // let beerName = this.state.beerName
+    // beerName.sort()
+    // console.log(this.state.beerName)
     return (
       <React.Fragment>
-        <ul>
-          {this.state.beers.map((beer, i) => (
+        {/* <ul>
+          {this.state.beerName.map((beer, i) => (
             <li key={i}><Link>{beer}</Link></li>
           ))}
-        </ul>
+        </ul> */}
       </React.Fragment>
     )
   }
 }
 
 export default BeerList
+
+// allBeerInfo[i].id
