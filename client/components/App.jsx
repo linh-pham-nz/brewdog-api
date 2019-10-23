@@ -1,39 +1,19 @@
 import React from 'react'
+import { HashRouter as Router, Route, Link } from 'react-router-dom'
 
 import Header from './Header'
-import { getAllBeers } from '../apiClient'
+import BeerList from './BeerList'
 
-class App extends React.Component {
-  state = {
-    beers: []
-  }
+const App = () => {
+  return (
+    <Router>
+      <Header />
+      <BeerList />
 
-  componentDidMount () {
-    getAllBeers()
-      .then(result => {
-        const allBeerInfo = result.body
-        const beerNames = []
-        for (let i = 0; i < allBeerInfo.length; i++) {
-          beerNames.push(allBeerInfo[i].name)
-        }
-        this.setState({
-          beers: beerNames
-        })
-      })
-  }
-
-  render () {
-    return (
-      <React.Fragment>
-        <Header />
-        <ul>
-          {this.state.beers.map(beer => (
-            <li key={beer}>{beer}</li>
-          ))}
-        </ul>
-      </React.Fragment>
-    )
-  }
+      <Route component={BeerList} />
+    </Router>
+  )
 }
+
 
 export default App
