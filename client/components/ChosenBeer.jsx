@@ -28,6 +28,17 @@ class ChosenBeer extends React.Component {
                 <p>Tagline: {this.state.beer.tagline}</p>
                 <p>Description: {this.state.beer.description}</p>
                 <p>ABV: {this.state.beer.abv}</p>
+                <p>First brewed: {this.state.beer.first_brewed}</p>
+                <p>Food pairing: {this.state.beer.food_pairing}</p>
+                {/* <ul>
+                    {this.state.beer.food_pairing.map(foods => (
+                        <li key={foods}>{foods}</li>
+                    ))}
+                </ul> */}
+                <img src={this.state.beer.image_url}></img>
+                <p>ABV: {this.state.beer.abv}</p>
+                <p>ABV: {this.state.beer.abv}</p>
+
             </React.Fragment>
         )
     }
