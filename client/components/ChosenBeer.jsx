@@ -14,18 +14,19 @@ class ChosenBeer extends React.Component {
         getChosenBeer(id)
             .then(result => {
                 const data = result.body
-                console.log(data, data[id])
+                const dataObject = result.body[0]
                 this.setState({
-                    beer: data
+                    beer: dataObject
                 })
             })
     }
 
     render() {
+        console.log(this.state.beer)
         return (
             <React.Fragment>
                 <h1>CHOSEN BEER</h1>
-                <h4>{this.state.beer.name}</h4>
+                <h4>This beer is: {this.state.beer.name}</h4>
             </React.Fragment>
         )
     }
