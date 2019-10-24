@@ -13,7 +13,6 @@ class ChosenBeer extends React.Component {
         let { id } = this.props.match.params
         getChosenBeer(id)
             .then(result => {
-                const data = result.body
                 const dataObject = result.body[0]
                 this.setState({
                     beer: dataObject
@@ -25,8 +24,10 @@ class ChosenBeer extends React.Component {
         console.log(this.state.beer)
         return (
             <React.Fragment>
-                <h1>CHOSEN BEER</h1>
-                <h4>This beer is: {this.state.beer.name}</h4>
+                <h4>{this.state.beer.name}</h4>
+                <p>Tagline: {this.state.beer.tagline}</p>
+                <p>Description: {this.state.beer.description}</p>
+                <p>ABV: {this.state.beer.abv}</p>
             </React.Fragment>
         )
     }
