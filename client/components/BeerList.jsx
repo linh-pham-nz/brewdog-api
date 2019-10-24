@@ -4,21 +4,20 @@ import { Link } from 'react-router-dom'
 import { getAllBeers } from '../apiClient'
 
 class BeerList extends React.Component {
-  state = {
-    beers: []
+  constructor(props) {
+    super(props)
+    this.state = {
+        beers: []
+    }
   }
 
   componentDidMount () {
     getAllBeers()
       .then(result => {
         const allBeerInfo = result.body
-        const beerNames = []
-        for (let i = 0; i < allBeerInfo.length; i++) {
-          beerNames.push(allBeerInfo[i].name)
-        }
-        beerNames.sort()
+        allBeerInfo.sort((a, b) => (a.name > b.name) ? 1 : -1)
         this.setState({
-          beers: beerNames
+          beers: allBeerInfo
         })
       })
   }
@@ -28,7 +27,7 @@ class BeerList extends React.Component {
       <React.Fragment>
         <ul>
           {this.state.beers.map((beer, i) => (
-            <li key={i}><Link>{beer}</Link></li>
+            <li key={i}><Link to={`/${beer.id}/${beer.name}`}>{beer.name}</Link></li>
           ))}
         </ul>
       </React.Fragment>
@@ -37,3 +36,4 @@ class BeerList extends React.Component {
 }
 
 export default BeerList
+
