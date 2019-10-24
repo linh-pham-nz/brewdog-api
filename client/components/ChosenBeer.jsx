@@ -36,8 +36,6 @@ class ChosenBeer extends React.Component {
                     ))}
                 </ul> */}
                 <img src={this.state.beer.image_url}></img>
-                <p>ABV: {this.state.beer.abv}</p>
-                <p>ABV: {this.state.beer.abv}</p>
 
             </React.Fragment>
         )
