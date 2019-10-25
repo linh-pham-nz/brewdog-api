@@ -5,7 +5,8 @@ class ChosenBeer extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            beer: []
+            beer: [],
+            food_pairing: []
         }
     }
 
@@ -15,13 +16,14 @@ class ChosenBeer extends React.Component {
             .then(result => {
                 const dataObject = result.body[0]
                 this.setState({
-                    beer: dataObject
+                    beer: dataObject,
+                    food_pairing: dataObject.food_pairing
                 })
             })
     }
 
     render() {
-        console.log(this.state.beer)
+        console.log(this.state.food_pairing)
         return (
             <React.Fragment>
                 <h4>{this.state.beer.name}</h4>
@@ -31,12 +33,12 @@ class ChosenBeer extends React.Component {
                         <p>Description: {this.state.beer.description}</p>
                         <p>ABV: {this.state.beer.abv}</p>
                         <p>First brewed: {this.state.beer.first_brewed}</p>
-                        <p>Food pairing: {this.state.beer.food_pairing}</p>
-                        {/* <ul>
-                            {this.state.beer.food_pairing.map(foods => (
-                                <li key={foods}>{foods}</li>
+                        <p>Food pairing: </p>
+                        <ul>
+                            {this.state.food_pairing.map((foods, i) => (
+                                <li key={i}>{foods}</li>
                             ))}
-                        </ul> */}
+                        </ul>
                     </div>
                     <div className="col-xl-6 col-sm-6">
                         <img src={this.state.beer.image_url}></img>
@@ -46,5 +48,6 @@ class ChosenBeer extends React.Component {
         )
     }
 }
+
 
 export default ChosenBeer
