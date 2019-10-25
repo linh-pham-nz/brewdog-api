@@ -8,9 +8,11 @@ import ChosenBeer from './ChosenBeer'
 const App = () => {
   return (
     <Router>
-      <Route path='/' component={Header} />
-      <Route exact path='/' component={BeerList} />
-      <Route path='/:id/:name' component={ChosenBeer} />
+      <div className='container'>
+        <Route path='/' component={Header} />
+        <Route exact path='/' component={BeerList} />
+        <Route path='/:id/:name' component={ChosenBeer} />
+      </div>
 
     </Router>
   )

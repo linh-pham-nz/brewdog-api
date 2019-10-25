@@ -5,7 +5,8 @@ class ChosenBeer extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            beer: []
+            beer: [],
+            food_pairing: []
         }
     }
 
@@ -15,33 +16,48 @@ class ChosenBeer extends React.Component {
             .then(result => {
                 const dataObject = result.body[0]
                 this.setState({
-                    beer: dataObject
+                    beer: dataObject,
+                    food_pairing: dataObject.food_pairing
                 })
             })
     }
 
     render() {
-        console.log(this.state.beer)
+        console.log(this.state.food_pairing)
         return (
             <React.Fragment>
                 <h4>{this.state.beer.name}</h4>
-                <p>Tagline: {this.state.beer.tagline}</p>
-                <p>Description: {this.state.beer.description}</p>
-                <p>ABV: {this.state.beer.abv}</p>
-                <p>First brewed: {this.state.beer.first_brewed}</p>
-                <p>Food pairing: {this.state.beer.food_pairing}</p>
-                {/* <ul>
-                    {this.state.beer.food_pairing.map(foods => (
-                        <li key={foods}>{foods}</li>
-                    ))}
-                </ul> */}
-                <img src={this.state.beer.image_url}></img>
-                <p>ABV: {this.state.beer.abv}</p>
-                <p>ABV: {this.state.beer.abv}</p>
-
+                <div className="row">
+                    <div className="col-xl-6 col-sm-6">
+                        <dl>
+                            <dt>Tagline:</dt>
+                            <dd>{this.state.beer.tagline}</dd>
+                            <dt>Description:</dt>
+                            <dd>{this.state.beer.description}</dd>
+                            <dt>ABV:</dt>
+                            <dd>{this.state.beer.abv}</dd>
+                            <dt>First brewed:</dt>
+                            <dd>{this.state.beer.first_brewed}</dd>
+                            <dt>Food pairing:</dt>
+                            {this.state.food_pairing.map((foods, i) => (
+                                <dd key={i}>{foods}</dd>
+                            ))}
+                        </dl>
+                    </div>
+                    <div className="col-xl-6 col-sm-6">
+                        <img src={this.state.beer.image_url}></img>
+                    </div>
+                </div>
             </React.Fragment>
         )
     }
 }
 
+
 export default ChosenBeer
+
+{/* <ul>
+    {this.state.food_pairing.map((foods, i) => (
+        <li key={i}>{foods}</li>
+    ))}
+</ul> */}
