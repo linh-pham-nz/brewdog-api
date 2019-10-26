@@ -23,10 +23,10 @@ class ChosenBeer extends React.Component {
     }
 
     render() {
-        console.log(this.state.food_pairing)
+        console.log(this.state.beer)
         return (
             <React.Fragment>
-                <h4>{this.state.beer.name}</h4>
+                <h2>{this.state.beer.name}</h2>
                 <div className="row">
                     <div className="col-xl-6 col-sm-6">
                         <dl>
@@ -56,8 +56,3 @@ class ChosenBeer extends React.Component {
 
 export default ChosenBeer
 
-{/* <ul>
-    {this.state.food_pairing.map((foods, i) => (
-        <li key={i}>{foods}</li>
-    ))}
-</ul> */}
