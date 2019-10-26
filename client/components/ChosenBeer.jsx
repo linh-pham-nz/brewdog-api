@@ -23,12 +23,15 @@ class ChosenBeer extends React.Component {
     }
 
     render() {
-        console.log(this.state.food_pairing)
+        console.log(this.state.beer)
         return (
             <React.Fragment>
-                <h4>{this.state.beer.name}</h4>
                 <div className="row">
-                    <div className="col-xl-6 col-sm-6">
+                    <div className="col-xl-2 col-sm-10">
+                        <img width="120" src={this.state.beer.image_url}></img>
+                    </div>
+                    <div className="col-xl-10 col-sm-10">
+                        <h2>{this.state.beer.name}</h2>
                         <dl>
                             <dt>Tagline:</dt>
                             <dd>{this.state.beer.tagline}</dd>
@@ -44,9 +47,6 @@ class ChosenBeer extends React.Component {
                             ))}
                         </dl>
                     </div>
-                    <div className="col-xl-6 col-sm-6">
-                        <img src={this.state.beer.image_url}></img>
-                    </div>
                 </div>
             </React.Fragment>
         )
@@ -56,8 +56,3 @@ class ChosenBeer extends React.Component {
 
 export default ChosenBeer
 
-{/* <ul>
-    {this.state.food_pairing.map((foods, i) => (
-        <li key={i}>{foods}</li>
-    ))}
-</ul> */}
