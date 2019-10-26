@@ -27,7 +27,7 @@ class BeerList extends React.Component {
       <React.Fragment>
         <ul>
           {this.state.beers.map((beer, i) => (
-            <li key={i}><Link to={`/${beer.id}`}>{beer.name}</Link></li>
+            <li key={i}><Link to={`/beer/${beer.id}`}>{beer.name}</Link></li>
           ))}
         </ul>
       </React.Fragment>
