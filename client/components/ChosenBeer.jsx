@@ -26,9 +26,12 @@ class ChosenBeer extends React.Component {
         console.log(this.state.beer)
         return (
             <React.Fragment>
-                <h2>{this.state.beer.name}</h2>
                 <div className="row">
-                    <div className="col-xl-6 col-sm-6">
+                    <div className="col-xl-2 col-sm-10">
+                        <img width="120" src={this.state.beer.image_url}></img>
+                    </div>
+                    <div className="col-xl-10 col-sm-10">
+                        <h2>{this.state.beer.name}</h2>
                         <dl>
                             <dt>Tagline:</dt>
                             <dd>{this.state.beer.tagline}</dd>
@@ -43,9 +46,6 @@ class ChosenBeer extends React.Component {
                                 <dd key={i}>{foods}</dd>
                             ))}
                         </dl>
-                    </div>
-                    <div className="col-xl-6 col-sm-6">
-                        <img src={this.state.beer.image_url}></img>
                     </div>
                 </div>
             </React.Fragment>
