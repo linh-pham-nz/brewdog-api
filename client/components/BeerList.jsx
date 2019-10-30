@@ -28,7 +28,7 @@ class BeerList extends React.Component {
         <div className="row">
           {this.state.beers.map((beer, i) => {
             return (
-              <div className="col-xl-4 col-sm-6" key={i}>
+              <div className="col-xl-2 col-sm-4" key={i}>
                 <div className="card card-dimensions zoom mb-4 shadow">
                 <Link to={`/beer/${beer.id}`}>{beer.name}
                   <img 
