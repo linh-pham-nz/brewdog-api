@@ -30,12 +30,17 @@ class BeerList extends React.Component {
             return (
               <div className="col-xl-2 col-sm-4" key={i}>
                 <div className="card card-dimensions zoom mb-4 shadow">
-                <Link to={`/beer/${beer.id}`}>{beer.name}
+                <Link to={`/beer/${beer.id}`}>
                   <img 
                     className="card-img-top card-img-top-dimensions"
                     src={beer.image_url}
                   ></img>
                 </Link>
+                <div className="card-body">
+                  <p className="card-body-name">{beer.name}</p>
+                  <p className="card-body-details">ABV: {beer.abv}</p>
+                  <p className="card-body-details">First brewed: {beer.first_brewed}</p>
+                </div>
                 </div>
               </div>
             )
