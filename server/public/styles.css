@@ -7,9 +7,10 @@
     color: black;
 }
 
-/* img {
-    max-height: 350;
-} */
+.card img {
+    /* max-height: 350; */
+    height: 350;
+}
 
 .card-title {
     font-weight: bold;
