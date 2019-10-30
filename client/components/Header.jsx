@@ -8,6 +8,7 @@ const Header = () => {
             <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/filters">Filters</Link></li>
+                <li><Link to="/beers">Beers</Link></li>
             </ul>
         </React.Fragment>
     )

@@ -11,7 +11,7 @@ const App = () => {
     <Router>
       <div className='container'>
         <Route path='/' component={Header} />
-        <Route exact path='/' component={BeerList} />
+        <Route exact path='/beers' component={BeerList} />
         <Route path='/filters' component={Filters} />
         <Route exact path='/beer/:id' component={ChosenBeer} />
       </div>
