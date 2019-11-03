@@ -1,5 +1,5 @@
 .card {
-    height: 600;
+    width: 100%;
 }
 
 .card a {
@@ -10,6 +10,8 @@
 .card img {
     width: auto;
     max-height: 300px;
+    display: block;
+    margin: 20px auto 10px;
 }
 
 .card-title {
