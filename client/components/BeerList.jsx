@@ -28,8 +28,8 @@ class BeerList extends React.Component {
         <div className="row">
           {this.state.beers.map((beer, i) => {
             return (
-              <div className="col-xl-3 col-sm-2 d-flex" key={i}>
-                <div className="card card-dimensions mb-4 flex-fill">
+              <div className="col-xl-3 col-sm-3 d-flex" key={i}>
+                <div className="card mb-4 flex-fill">
                   <Link to={`/beer/${beer.id}`}>
                     <div className="card-body">
                       <p className="card-title">{beer.name}</p>

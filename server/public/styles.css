@@ -8,8 +8,8 @@
 }
 
 .card img {
-    /* max-height: 350; */
-    height: 350;
+    width: auto;
+    max-height: 300px;
 }
 
 .card-title {
