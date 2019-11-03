@@ -27,10 +27,10 @@ class ChosenBeer extends React.Component {
         return (
             <React.Fragment>
                 <div className="row">
-                    <div className="col-xl-2 col-sm-10">
+                    <div className="col-xl-2 col-sm-4">
                         <img width="120" src={this.state.beer.image_url}></img>
                     </div>
-                    <div className="col-xl-10 col-sm-10">
+                    <div className="col-xl-10 col-sm-8">
                         <h2>{this.state.beer.name}</h2>
                         <dl>
                             <dt>Tagline:</dt>
