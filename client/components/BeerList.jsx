@@ -35,8 +35,8 @@ class BeerList extends React.Component {
                       <p className="card-title">{beer.name}</p>
                       <p className="card-text">ABV: {beer.abv}%</p>
                       <p className="card-text">First brewed: {beer.first_brewed}</p>
-                    <img 
-                      className="card-img-bottom"
+                    <img
+                      className="card-img-bottom mx-auto d-block"
                       src={beer.image_url}
                     ></img>
                     </div>
