@@ -43,7 +43,7 @@ class ChosenBeer extends React.Component {
                             <dd>{this.state.beer.first_brewed}</dd>
                             <dt>Food pairing:</dt>
                             {this.state.food_pairing.map((foods, i) => (
-                                <dd key={i}>{foods}</dd>
+                                <dd id="food-text"key={i}>{foods}</dd>
                             ))}
                         </dl>
                     </div>
