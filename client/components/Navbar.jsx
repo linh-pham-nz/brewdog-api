@@ -5,7 +5,9 @@ const Navbar = () => {
     return (
         <React.Fragment>
             <nav className="navbar navbar-expand-md navbar-light bg-light">
-                <h1><i className="fas fa-beer"></i>BREWDOG BEERS<i className="fas fa-beer"></i></h1>
+                <div className="d-flex justify-content-center">
+                    <Link to="/"><h1><i className="fas fa-beer"></i>BREWDOG BEERS<i className="fas fa-beer"></i></h1></Link>
+                </div>
                 <div className="navbar-nav">
                     <Link className="nav-item nav-link active" to="/">Home</Link>
                     <Link className="nav-item nav-link" to="/filters">Filters</Link>
