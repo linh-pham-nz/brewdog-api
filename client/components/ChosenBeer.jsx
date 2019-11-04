@@ -27,10 +27,10 @@ class ChosenBeer extends React.Component {
         return (
             <React.Fragment>
                 <div className="row">
-                    <div className="col-xl-2 col-sm-10">
+                    <div className="col-xl-2 col-sm-4">
                         <img width="120" src={this.state.beer.image_url}></img>
                     </div>
-                    <div className="col-xl-10 col-sm-10">
+                    <div className="col-xl-10 col-sm-8">
                         <h2>{this.state.beer.name}</h2>
                         <dl>
                             <dt>Tagline:</dt>
@@ -43,7 +43,7 @@ class ChosenBeer extends React.Component {
                             <dd>{this.state.beer.first_brewed}</dd>
                             <dt>Food pairing:</dt>
                             {this.state.food_pairing.map((foods, i) => (
-                                <dd key={i}>{foods}</dd>
+                                <dd id="food-text"key={i}>{foods}</dd>
                             ))}
                         </dl>
                     </div>

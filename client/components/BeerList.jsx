@@ -28,17 +28,17 @@ class BeerList extends React.Component {
         <div className="row">
           {this.state.beers.map((beer, i) => {
             return (
-              <div className="col-xl-2 col-sm-4" key={i}>
-                <div className="card card-dimensions zoom mb-4 shadow">
+              <div className="col-xl-3 col-md-4 col-sm-6 d-flex" key={i}>
+                <div className="card mb-4 flex-fill">
                   <Link to={`/beer/${beer.id}`}>
-                    <img 
-                      className="card-img-top card-img-top-dimensions"
+                    <div className="card-body">
+                      <p className="card-title">{beer.name}</p>
+                      <p className="card-text"><strong>ABV: </strong>{beer.abv}%</p>
+                      <p className="card-text"><strong>First brewed: </strong>{beer.first_brewed}</p>
+                    <img
+                      className="card-img-bottom"
                       src={beer.image_url}
                     ></img>
-                    <div className="card-body">
-                      <p className="card-body-name">{beer.name}</p>
-                      <p className="card-body-details">ABV: {beer.abv}</p>
-                      <p className="card-body-details">First brewed: {beer.first_brewed}</p>
                     </div>
                   </Link>
                 </div>
@@ -53,32 +53,4 @@ class BeerList extends React.Component {
 
 export default BeerList
 
-{/* <ul>
-{this.state.beers.map((beer, i) => (
-  <li key={i}><Link to={`/beer/${beer.id}`}>{beer.name}</Link></li>
-))}
-</ul> */}
-
-{/* <h1 className="component-heading">ADOPT A CAT</h1>
-                <div className="row">
-                    {this.state.cats.map((cat, i) => {
-                        return (
-                            <div className="col-xl-4 col-sm-6" key={i}>
-                                <div className="card card-dimensions zoom mb-4 shadow">
-                                    <Link to={`/Name/${cat.id}`}>
-                                        <img 
-                                            className="card-img-top card-img-top-dimensions" 
-                                            src={`/images/cats/${cat.name}.jpg`}>
-                                        </img>
-                                    </Link>
-                                    <div className="card-body">
-                                        <p className="card-body-name">{cat.name}</p>
-                                        <p className="card-body-details">{cat.breed}</p>
-                                        <p className="card-body-details">{cat.age} years old</p>
-                                    </div>
-                                </div>
-                            </div>
-                        )
-                    })}
-                </div> */}
 

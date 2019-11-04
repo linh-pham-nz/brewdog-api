@@ -1,0 +1,61 @@
+/* Body styling */
+
+a:hover{
+    text-decoration: none;
+}
+
+/* Navbar styling */
+
+nav {
+    margin-bottom: 1.5em;
+    border-radius: 0 0 15px 15px;
+}
+
+nav h1 {
+    color: rgba(0,0,0,0.8);
+    font-size: 4em;
+    text-decoration: none;
+    padding: 20px;
+    width: 100%;
+}
+
+/* .logo {
+    display: block;
+} */
+
+.logo-image {
+    height: 120px;
+    width: auto;
+}
+
+/* Card styling */
+
+.card {
+    width: 100%;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+}
+
+.card img {
+    width: auto;
+    max-height: 300px;
+    display: block;
+    margin: 20px auto 10px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 0px;
+}
+
+.card-text {
+    margin-bottom: 5px;
+}
+
+#food-text {
+    margin-bottom: 0px;
+}
