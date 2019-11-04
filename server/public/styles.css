@@ -1,3 +1,11 @@
+/* Body styling */
+
+a:hover{
+    text-decoration: none;
+}
+
+/* Navbar styling */
+
 nav {
     margin-bottom: 1.5em;
     border-radius: 0 0 15px 15px;
@@ -8,16 +16,15 @@ nav h1 {
     font-size: 4em;
     text-decoration: none;
     padding: 20px;
-}
-
-a:hover{
-    text-decoration: none;
+    width: 100%;
 }
 
 .fa-beer {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+/* Card styling */
 
 .card {
     width: 100%;
