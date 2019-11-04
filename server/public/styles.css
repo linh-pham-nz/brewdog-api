@@ -1,3 +1,18 @@
+nav {
+    margin-bottom: 1.5em;
+    border-radius: 0 0 20px 20px;
+}
+
+nav h1 {
+    font-size: 4em;
+    display: block;
+    padding: 20px;
+}
+
+/* .navbar-nav {
+    display: inline-block;
+} */
+
 .fa-beer {
     padding-left: 10px;
     padding-right: 10px;

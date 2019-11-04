@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
     return (
         <React.Fragment>
-            <nav className="navbar navbar-light bg-light">
+            <nav className="navbar navbar-expand-md navbar-light bg-light">
                 <h1><i className="fas fa-beer"></i>BREWDOG BEERS<i className="fas fa-beer"></i></h1>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/filters">Filters</Link></li>
-                    <li><Link to="/beers">Beers</Link></li>
-                </ul>
+                <div className="navbar-nav">
+                    <Link className="nav-item nav-link active" to="/">Home</Link>
+                    <Link className="nav-item nav-link" to="/filters">Filters</Link>
+                    <Link className="nav-item nav-link" to="/beers">Beers</Link>
+                </div>
             </nav>
         </React.Fragment>
     )
