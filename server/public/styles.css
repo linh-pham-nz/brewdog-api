@@ -19,9 +19,13 @@ nav h1 {
     width: 100%;
 }
 
-.fa-beer {
-    padding-left: 10px;
-    padding-right: 10px;
+/* .logo {
+    display: block;
+} */
+
+.logo-image {
+    height: 120px;
+    width: auto;
 }
 
 /* Card styling */
