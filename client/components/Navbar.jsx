@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-// import * from '../../server/public/BrewDogLogo.png'
-
 const Navbar = () => {
     return (
         <React.Fragment>
