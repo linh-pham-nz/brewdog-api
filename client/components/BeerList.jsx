@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { getAllBeers } from '../apiClient'
+import { getBeersById1to80, getBeersById81to160 } from '../apiClient'
 
 class BeerList extends React.Component {
   constructor(props) {
@@ -12,13 +12,25 @@ class BeerList extends React.Component {
   }
 
   componentDidMount () {
-    getAllBeers()
+    const allBeerInfo = []
+    getBeersById1to80()
       .then(result => {
-        const allBeerInfo = result.body
-        allBeerInfo.sort((a, b) => (a.name > b.name) ? 1 : -1)
-        this.setState({
-          beers: allBeerInfo
-        })
+        const beerInfo1to80 = result.body
+        for (let i = 0; i < beerInfo1to80.length; i++) {
+          allBeerInfo.push(beerInfo1to80[i])
+        }
+      })
+    getBeersById81to160()
+      .then(result => {
+        const beerInfo81to160 = result.body
+          for (let i = 0; i < beerInfo81to160.length; i++) {
+            allBeerInfo.push(beerInfo81to160[i]);
+          }
+          // console.log(allBeerInfo)
+          allBeerInfo.sort((a, b) => (a.name > b.name) ? 1 : -1)
+          this.setState({
+            beers: allBeerInfo
+          })
       })
   }
 
@@ -52,5 +64,4 @@ class BeerList extends React.Component {
 }
 
 export default BeerList
-
 
