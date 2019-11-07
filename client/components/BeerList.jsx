@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 import { getBeersById1to80, 
          getBeersById81to160, 
          getBeersById161to240,
-         getBeersById241to320 } from '../apiClient'
+         getBeersById241to320,
+         getBeersById321to400 } from '../apiClient'
 
 class BeerList extends React.Component {
   constructor(props) {
@@ -16,6 +17,13 @@ class BeerList extends React.Component {
 
   componentDidMount () {
     const allBeerInfo = []
+    getBeersById321to400()
+      .then(result => {
+        const beerInfo321to400 = result.body
+        for (let i = 0; i < beerInfo321to400.length; i++) {
+          allBeerInfo.push(beerInfo321to400[i])
+        }
+      })
     getBeersById1to80()
       .then(result => {
         const beerInfo1to80 = result.body
@@ -43,8 +51,9 @@ class BeerList extends React.Component {
         for (let i = 0; i < beerInfo241to320.length; i++) {
           allBeerInfo.push(beerInfo241to320[i]);
         }
-        console.log(allBeerInfo)
+        // allBeerInfo.sort((a, b) => (a.id > b.id) ? 1 : -1)
         allBeerInfo.sort((a, b) => (a.name > b.name) ? 1 : -1)
+        console.log(allBeerInfo)
         this.setState({
           beers: allBeerInfo
         })
