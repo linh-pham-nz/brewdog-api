@@ -17,9 +17,8 @@ export function getBeersById81to160() {
     .catch(e => { console.log(e) })
 }
 
-// export function getFruits () {
-//   return request.get(rootUrl + '/fruits')
-//     .then(res => {
-//       return res.body.fruits
-//     })
-// }
+export function getBeersById161to240() {
+  return request.get('https://api.punkapi.com/v2/beers?page=3&per_page=80')
+    .catch(e => { console.log(e) })
+}
+
