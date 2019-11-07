@@ -22,3 +22,8 @@ export function getBeersById161to240() {
     .catch(e => { console.log(e) })
 }
 
+export function getBeersById241to320() {
+  return request.get('https://api.punkapi.com/v2/beers?page=4&per_page=80')
+    .catch(e => { console.log(e) })
+}
+
