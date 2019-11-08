@@ -1,7 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { getAllBeers } from '../apiClient'
+import { getBeersById1to80, 
+         getBeersById81to160, 
+         getBeersById161to240,
+         getBeersById241to320,
+         getBeersById321to400 } from '../apiClient'
 
 class BeerList extends React.Component {
   constructor(props) {
@@ -12,14 +16,48 @@ class BeerList extends React.Component {
   }
 
   componentDidMount () {
-    getAllBeers()
+    const allBeerInfo = []
+    getBeersById321to400()
       .then(result => {
-        const allBeerInfo = result.body
+        const beerInfo321to400 = result.body
+        for (let i = 0; i < beerInfo321to400.length; i++) {
+          allBeerInfo.push(beerInfo321to400[i])
+        }
+      })
+    getBeersById1to80()
+      .then(result => {
+        const beerInfo1to80 = result.body
+        for (let i = 0; i < beerInfo1to80.length; i++) {
+          allBeerInfo.push(beerInfo1to80[i])
+        }
+      })
+    getBeersById81to160()
+      .then(result => {
+        const beerInfo81to160 = result.body
+          for (let i = 0; i < beerInfo81to160.length; i++) {
+            allBeerInfo.push(beerInfo81to160[i]);
+          }
+      })
+    getBeersById161to240()
+      .then(result => {
+        const beerInfo161to240 = result.body
+        for (let i = 0; i < beerInfo161to240.length; i++) {
+          allBeerInfo.push(beerInfo161to240[i])
+        }
+      })
+      getBeersById241to320()
+      .then(result => {
+        const beerInfo241to320 = result.body
+        for (let i = 0; i < beerInfo241to320.length; i++) {
+          allBeerInfo.push(beerInfo241to320[i]);
+        }
+        // allBeerInfo.sort((a, b) => (a.id > b.id) ? 1 : -1)
         allBeerInfo.sort((a, b) => (a.name > b.name) ? 1 : -1)
+        console.log(allBeerInfo)
         this.setState({
           beers: allBeerInfo
         })
-      })
+      })  
   }
 
   render () {
@@ -52,5 +90,4 @@ class BeerList extends React.Component {
 }
 
 export default BeerList
-
 
