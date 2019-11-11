@@ -8,7 +8,7 @@ export function getChosenBeer(id) {
 }
 
 export function getBeersById1to80() {
-  return request.get('https://api.punkapi.com/v2/beers?per_page=80')
+  return request.get('https://api.punkapi.com/v2/beers?page=1&per_page=80')
     .catch(e => { console.log(e) })
 }
 
