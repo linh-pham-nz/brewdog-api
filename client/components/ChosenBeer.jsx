@@ -30,7 +30,9 @@ class ChosenBeer extends React.Component {
                     <div className="col-xl-2 col-sm-4">
                         <img 
                             width="120" 
-                            src={this.state.beer.image_url === null ? "defaultPlaceholder.png" : this.state.beer.image_url}>
+                            src={this.state.beer.image_url === null 
+                                ? "defaultPlaceholder.png" 
+                                : this.state.beer.image_url}>
                         </img>
                     </div>
                     <div className="col-xl-10 col-sm-8">
@@ -59,5 +61,4 @@ class ChosenBeer extends React.Component {
 
 export default ChosenBeer
 
-// src={beer.image_url === null ? "defaultPlaceholder.png" : beer.image_url}
 
