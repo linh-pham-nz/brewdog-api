@@ -65,7 +65,7 @@ class BeerList extends React.Component {
                       <p className="card-text"><strong>First brewed: </strong>{beer.first_brewed}</p>
                     <img
                       className="card-img-bottom"
-                      src={beer.image_url}
+                      src={beer.image_url === null ? "defaultPlaceholder.png" : beer.image_url}
                     ></img>
                     </div>
                   </Link>
@@ -80,4 +80,3 @@ class BeerList extends React.Component {
 }
 
 export default BeerList
-
