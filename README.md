@@ -13,3 +13,5 @@ npm run dev # to start the dev server
 
 You can find the server running on [http://localhost:3000](http://localhost:3000).
 
+This project is currently a WIP and changes will be continuously added.
+
