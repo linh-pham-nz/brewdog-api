@@ -28,7 +28,12 @@ class ChosenBeer extends React.Component {
             <React.Fragment>
                 <div className="row">
                     <div className="col-xl-2 col-sm-4">
-                        <img width="120" src={this.state.beer.image_url}></img>
+                        <img 
+                            width="120" 
+                            src={this.state.beer.image_url === null 
+                                ? "defaultPlaceholder.png" 
+                                : this.state.beer.image_url}>
+                        </img>
                     </div>
                     <div className="col-xl-10 col-sm-8">
                         <h2>{this.state.beer.name}</h2>
@@ -55,4 +60,5 @@ class ChosenBeer extends React.Component {
 
 
 export default ChosenBeer
+
 
