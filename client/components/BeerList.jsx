@@ -27,17 +27,17 @@ class BeerList extends React.Component {
         const beerInfo241to320 = result.body
         allBeerInfo.push(...beerInfo241to320)
       })  
-      getBeersById161to240()
+    getBeersById161to240()
       .then(result => {
         const beerInfo161to240 = result.body
         allBeerInfo.push(...beerInfo161to240)
       })
-      getBeersById81to160()
+    getBeersById81to160()
       .then(result => {
         const beerInfo81to160 = result.body
         allBeerInfo.push(...beerInfo81to160)
       })
-      getBeersById1to80()
+    getBeersById1to80()
       .then(result => {
         const beerInfo1to80 = result.body
         allBeerInfo.push(...beerInfo1to80)

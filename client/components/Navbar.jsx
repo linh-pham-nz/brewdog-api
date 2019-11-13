@@ -7,7 +7,13 @@ const Navbar = () => {
             <nav className="navbar navbar-expand-md navbar-light bg-light">
                 <div className="container-fluid">
                     <div className="d-flex logo">
-                        <Link to="/"><img className="logo-image" src="BrewDogLogo.png"></img><h1>BREWDOG BEERS</h1></Link>
+                        <Link to="/">
+                            <img 
+                                className="logo-image" 
+                                src="BrewDogLogo.png">
+                            </img>
+                            <h1>BREWDOG BEERS</h1>
+                        </Link>
                     </div>
                     <div className="navbar-nav">
                         <Link className="nav-item nav-link active" to="/">Home</Link>
