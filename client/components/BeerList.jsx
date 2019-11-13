@@ -17,17 +17,29 @@ const beerAPICalls = [
 ]
 
 const allBeerInfo = []
+const beerInfo = []
 
-function getAllBeerInfo() {
+const getAllBeerInfo = () => {
   for (let i = 0; i < beerAPICalls.length; i++) {
-    beerAPICalls[i]
+    return beerAPICalls[i]
     .then(result => {
       const beerInfo = result.body
-      return allBeerInfo.push(...beerInfo)
+      allBeerInfo.push(...beerInfo)
     })
   }
-  // console.log(allBeerInfo)
+  console.log(allBeerInfo.length)
+  return allBeerInfo
 }
+
+// const getAllBeerInfo = () => {
+//   const allBeerInfo = []
+//   beerAPICalls.map(function(result) {
+//     const beerInfo = result.body
+//     allBeerInfo.push(beerInfo)
+//     return allBeerInfo
+//   })
+//   console.log(allBeerInfo)
+// }
 
 class BeerList extends React.Component {
   constructor(props) {
@@ -37,47 +49,17 @@ class BeerList extends React.Component {
     }
   }
 
-  componentDidMount () {
-    // const allBeerInfo = []
-    // getBeersById321to400()
-    //   .then(result => {
-    //     const beerInfo321to400 = result.body
-    //     allBeerInfo.push(...beerInfo321to400)
-    //   })
-    // getBeersById1to80()
-    //   .then(result => {
-    //     const beerInfo1to80 = result.body
-    //     allBeerInfo.push(...beerInfo1to80)
-    //   })
-    // getBeersById81to160()
-    //   .then(result => {
-    //     const beerInfo81to160 = result.body
-    //     allBeerInfo.push(...beerInfo81to160)
-    //   })
-    // getBeersById161to240()
-    //   .then(result => {
-    //     const beerInfo161to240 = result.body
-    //     allBeerInfo.push(...beerInfo161to240)
-    //   })
-    // getBeersById241to320()
-    //   .then(result => {
-    //     const beerInfo241to320 = result.body
-    //     allBeerInfo.push(...beerInfo241to320)
-    //     // allBeerInfo.sort((a, b) => (a.id > b.id) ? 1 : -1)
-    //     allBeerInfo.sort((a, b) => (a.name > b.name) ? 1 : -1)
-    //     console.log(allBeerInfo)
-    //     this.setState({
-    //       beers: allBeerInfo
-    //     })
-    //   })  
 
+  componentDidMount () {
     getAllBeerInfo()
-      .then()
-      allBeerInfo.sort((a, b) => (a.name > b.name) ? 1 : -1)
-      this.setState({
-        beers: allBeerInfo
+      .then(result => {
+        const beerResults = result.body
+        beerResults.sort((a, b) => (a.name > b.name) ? 1 : -1)
       })
-    console.log(allBeerInfo)
+      this.setState({
+        beers: beerResults
+      })
+    console.log(beerResults)
   }
 
   render () {
@@ -111,3 +93,35 @@ class BeerList extends React.Component {
 
 export default BeerList
 
+    // const allBeerInfo = []
+    // getBeersById321to400()
+    //   .then(result => {
+    //     const beerInfo321to400 = result.body
+    //     allBeerInfo.push(...beerInfo321to400)
+    //   })
+    // getBeersById1to80()
+    //   .then(result => {
+    //     const beerInfo1to80 = result.body
+    //     allBeerInfo.push(...beerInfo1to80)
+    //   })
+    // getBeersById81to160()
+    //   .then(result => {
+    //     const beerInfo81to160 = result.body
+    //     allBeerInfo.push(...beerInfo81to160)
+    //   })
+    // getBeersById161to240()
+    //   .then(result => {
+    //     const beerInfo161to240 = result.body
+    //     allBeerInfo.push(...beerInfo161to240)
+    //   })
+    // getBeersById241to320()
+    //   .then(result => {
+    //     const beerInfo241to320 = result.body
+    //     allBeerInfo.push(...beerInfo241to320)
+    //     // allBeerInfo.sort((a, b) => (a.id > b.id) ? 1 : -1)
+    //     allBeerInfo.sort((a, b) => (a.name > b.name) ? 1 : -1)
+    //     console.log(allBeerInfo)
+    //     this.setState({
+    //       beers: allBeerInfo
+    //     })
+    //   }) 
