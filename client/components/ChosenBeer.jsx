@@ -29,6 +29,7 @@ class ChosenBeer extends React.Component {
                 <div className="row">
                     <div className="col-xl-2 col-sm-4">
                         <img 
+                            id="chosenBeerImg"
                             width="120" 
                             src={this.state.beer.image_url === null 
                                 ? "defaultPlaceholder.png" 

@@ -60,3 +60,9 @@ nav h1 {
 #food-text {
     margin-bottom: 0px;
 }
+
+/* ChosenBeer styling */
+
+#chosenBeerImg {
+    padding-bottom: 20px;
+}
