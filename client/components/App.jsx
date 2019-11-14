@@ -14,6 +14,8 @@ const App = () => {
         <Route exact path='/beers' component={BeerList} />
         <Route path='/filters' component={Filters} />
         <Route exact path='/beer/:id' component={ChosenBeer} />
+        <h1>Welcome to the BrewDog Beers page!</h1>
+        <p>Click on the links above to find out more about individual beers.</p>
       </div>
 
     </Router>
