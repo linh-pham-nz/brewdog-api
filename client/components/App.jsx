@@ -5,6 +5,7 @@ import Navbar from './Navbar'
 import BeerList from './BeerList'
 import ChosenBeer from './ChosenBeer'
 import Filters from './Filters'
+import Welcome from './Welcome'
 
 const App = () => {
   return (
@@ -14,13 +15,10 @@ const App = () => {
         <Route exact path='/beers' component={BeerList} />
         <Route path='/filters' component={Filters} />
         <Route exact path='/beer/:id' component={ChosenBeer} />
-        <h1>Welcome to the BrewDog Beers page!</h1>
-        <p>Click on the links above to find out more about individual beers.</p>
+        <Welcome />
       </div>
-
     </Router>
   )
 }
-
 
 export default App
