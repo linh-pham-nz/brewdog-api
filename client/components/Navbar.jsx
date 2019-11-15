@@ -19,7 +19,7 @@ const Navbar = () => {
                         <br></br>
                         </div>
                     <div className="row">
-                        <div className="navbar-nav row" id="nav-row">
+                        <div className="navbar-nav">
                             <Link className="nav-item nav-link active" to="/">Home</Link>
                             <Link className="nav-item nav-link" to="/filters">Filters</Link>
                             <Link className="nav-item nav-link" to="/beers">Beers</Link>
