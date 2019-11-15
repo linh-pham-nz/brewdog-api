@@ -6,6 +6,7 @@ import BeerList from './BeerList'
 import ChosenBeer from './ChosenBeer'
 import Filters from './Filters'
 import Welcome from './Welcome'
+import RandomBeer from './RandomBeer'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path='/beers' component={BeerList} />
         <Route path='/filters' component={Filters} />
         <Route exact path='/beer/:id' component={ChosenBeer} />
+        <Route path='/random-beer' component={RandomBeer} />
       </div>
     </Router>
   )
