@@ -15,10 +15,12 @@ const Navbar = () => {
                             <h1>BREWDOG BEERS</h1>
                         </Link>
                     </div>
-                    <div className="navbar-nav">
+                    <br></br>
+                    <div className="navbar-nav row" id="nav-row">
                         <Link className="nav-item nav-link active" to="/">Home</Link>
                         <Link className="nav-item nav-link" to="/filters">Filters</Link>
                         <Link className="nav-item nav-link" to="/beers">Beers</Link>
+                        <Link className="nav-item nav-link" to="/random-beer">Random Beer</Link>
                     </div>
                 </div>
             </nav>
