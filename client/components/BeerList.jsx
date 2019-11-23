@@ -58,7 +58,7 @@ class BeerList extends React.Component {
             return (
               <div className="col-xl-3 col-md-4 col-sm-6 d-flex" key={i}>
                 <div className="card mb-4 flex-fill">
-                  <Link to={`/beer/${beer.id}`}>
+                  <Link to={`/beer/${beer.id}`} target="_blank">
                     <div className="card-body">
                       <p className="card-title">{beer.name}</p>
                       <p className="card-text"><strong>ABV: </strong>{beer.abv}%</p>
