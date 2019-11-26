@@ -7,6 +7,11 @@ export function getChosenBeer(id) {
     .catch(e => {console.log(e) })
 }
 
+export function getRandomBeer() {
+  return request.get('https://api.punkapi.com/v2/beers/random')
+    .catch(e => { console.log(e) })
+}
+
 export function getBeersById321to400() {
   return request.get('https://api.punkapi.com/v2/beers?page=5&per_page=80')
     .catch(e => { console.log(e) })
