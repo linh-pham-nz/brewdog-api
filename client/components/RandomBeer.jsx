@@ -8,9 +8,14 @@ class RandomBeer extends React.Component {
             beer: [],
             food_pairing: []
         }
+        this.newRandomBeer = this.newRandomBeer.bind(this)
     }
 
     componentDidMount() {
+        this.newRandomBeer()
+    }
+    
+    newRandomBeer() {
         getRandomBeer()
             .then(result => {
                 let randomBeer = result.body[0]
@@ -18,14 +23,14 @@ class RandomBeer extends React.Component {
                     beer: randomBeer,
                     food_pairing: randomBeer.food_pairing
                 })
-            })
+            })     
     }
 
     render() {
         return(
             <React.Fragment>
                 <div id="randomBeerSection">
-                    <button id="randomBeerButton">Click for another random beer</button>
+                    <button onClick={this.newRandomBeer} id="randomBeerButton">Click for another random beer</button>
                 </div>
                 <div>
                     <div className="row">
