@@ -81,3 +81,7 @@ nav h1 {
     border-width: 4px;
     margin-bottom: 20px;
 }
+
+button:focus {
+    outline:0;
+}
