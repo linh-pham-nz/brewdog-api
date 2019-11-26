@@ -41,19 +41,19 @@ class ChosenBeer extends React.Component {
                         <div className="row">
                             <div className="col-xl-6 col-sm-12">
                                 <dl>
-                                    <dt>Tagline:</dt>
+                                    <dt>Tagline</dt>
                                     <dd>{this.state.beer.tagline}</dd>
-                                    <dt>Description:</dt>
+                                    <dt>Description</dt>
                                     <dd>{this.state.beer.description}</dd>
-                                    <dt>ABV:</dt>
+                                    <dt>ABV</dt>
                                     <dd>{this.state.beer.abv}</dd>
-                                    <dt>First brewed:</dt>
+                                    <dt>First brewed</dt>
                                     <dd>{this.state.beer.first_brewed}</dd>
                                 </dl>
                             </div>
                             <div className="col-xl-6 col-sm-12">
                                 <dl>
-                                    <dt>Food pairing:</dt>
+                                    <dt>Food pairing</dt>
                                     {this.state.food_pairing.map((foods, i) => (
                                         <dd id="food-text" key={i}>- {foods}</dd>
                                     ))}
