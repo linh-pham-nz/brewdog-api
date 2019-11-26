@@ -6,6 +6,7 @@ a:hover{
 
 h2 {
     font-size: 3em;
+    margin-bottom: 20px;
 }
 
 dt {
@@ -73,6 +74,9 @@ nav h1 {
 
 #chosenBeerImg {
     padding-bottom: 20px;
+    display: block;
+    margin: auto;
+    
 }
 
 /* RandomBeer styling */
