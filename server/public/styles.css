@@ -4,6 +4,14 @@ a:hover{
     text-decoration: none;
 }
 
+h2 {
+    font-size: 3em;
+}
+
+dt {
+    font-size: 1.25em;
+}
+
 /* Navbar styling */
 
 nav {
