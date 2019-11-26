@@ -1,4 +1,5 @@
 import React from 'react'
+import { getRandomBeer } from '../apiClient' 
 
 class RandomBeer extends React.Component {
     constructor(props) {
@@ -7,6 +8,13 @@ class RandomBeer extends React.Component {
             beer: [],
             food_pairing: []
         }
+    }
+
+    componentDidMount() {
+        getRandomBeer()
+            .then(result => {
+                console.log(result.body)
+            })
     }
 
     render() {
