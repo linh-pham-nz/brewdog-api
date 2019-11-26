@@ -13,11 +13,16 @@ class RandomBeer extends React.Component {
     componentDidMount() {
         getRandomBeer()
             .then(result => {
-                console.log(result.body)
+                let randomBeer = result.body[0]
+                this.setState({
+                    beer: randomBeer,
+                    food_pairing: randomBeer.food_pairing
+                })
             })
     }
 
     render() {
+        console.log(this.state.beer)
         return(
             <React.Fragment>
                 <p>Click this button to learn about a random beer!</p>
