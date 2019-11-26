@@ -26,7 +26,7 @@ class RandomBeer extends React.Component {
             <React.Fragment>
                 <div>
                     <p>Click this button to learn about a random beer!</p>
-                    <button id="beerButton">Cheers</button>
+                    <button id="randomBeerButton">Cheers</button>
                     <br></br>
                 </div>
                 <div>
