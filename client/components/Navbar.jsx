@@ -11,9 +11,8 @@ const Navbar = () => {
                             <Link to="/">
                                 <img 
                                     className="logo-image" 
-                                    src="BrewDogLogo.png">
+                                    src="BrewDogLogo3.png">
                                 </img>
-                                <h1>BREWDOG BEERS</h1>
                             </Link>
                         </div>
                         <br></br>
