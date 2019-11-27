@@ -10,7 +10,7 @@ const Navbar = () => {
                         <div className="d-flex logo">
                             <Link to="/">
                                 <img 
-                                    className="logo-image" 
+                                    className="logo-image img-fluid" 
                                     src="BrewDogLogo3.png">
                                 </img>
                             </Link>
