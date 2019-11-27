@@ -20,18 +20,6 @@ nav {
     border-radius: 0 0 15px 15px;
 }
 
-nav h1 {
-    color: rgba(0,0,0,0.8);
-    font-size: 5em;
-    text-decoration: none;
-    padding: 20px;
-    display: inline;
-}
-
-/* .logo {
-    display: block;
-} */
-
 .logo-image {
     display: block;
     height: 150px;

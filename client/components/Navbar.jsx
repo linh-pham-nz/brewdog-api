@@ -7,7 +7,7 @@ const Navbar = () => {
             <nav className="navbar navbar-expand-md navbar-light bg-light sticky-top">
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="d-flex logo">
+                        <div className="d-flex">
                             <Link to="/">
                                 <img 
                                     className="logo-image img-fluid" 
