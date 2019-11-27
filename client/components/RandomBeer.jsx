@@ -29,14 +29,14 @@ class RandomBeer extends React.Component {
     render() {
         return(
             <React.Fragment>
-                <div id="randomBeerSection">
-                    <button 
-                        onClick={this.newRandomBeer} 
-                        id="randomBeerButton">
-                        Click for another random beer
-                    </button>
-                </div>
                 <div>
+                    <div className="sticky" id="randomBeerSection">
+                        <button 
+                            onClick={this.newRandomBeer} 
+                            id="randomBeerButton">
+                            Click for another random beer
+                        </button>
+                    </div>
                     <div className="row">
                         <div className="col-xl-2 col-sm-4">
                             <img 

@@ -20,21 +20,10 @@ nav {
     border-radius: 0 0 15px 15px;
 }
 
-nav h1 {
-    color: rgba(0,0,0,0.8);
-    font-size: 5em;
-    text-decoration: none;
-    padding: 20px;
-    display: inline;
-}
-
-.logo {
-    display: block;
-}
-
 .logo-image {
-    height: 120px;
-    width: auto;
+    display: block;
+    height: 150px;
+    /* width: auto; */
 }
 
 
@@ -83,10 +72,15 @@ nav h1 {
 
 #randomBeerSection {
     text-align: right;
-    font-size: 1.75em;
+}
+
+div.sticky {
+    position: sticky;
+    top: 0;
 }
 
 #randomBeerButton {
+    font-size: 1.75em;
     display: inline;
     padding: 10px;
     border-radius: 10px;

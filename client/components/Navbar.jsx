@@ -4,16 +4,15 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
     return (
         <React.Fragment>
-            <nav className="navbar navbar-expand-md navbar-light bg-light">
+            <nav className="navbar navbar-expand-md navbar-light bg-light sticky-top">
                 <div className="container-fluid">
                     <div className="row">
-                        <div className="d-flex logo">
+                        <div className="d-flex">
                             <Link to="/">
                                 <img 
-                                    className="logo-image" 
-                                    src="BrewDogLogo.png">
+                                    className="logo-image img-fluid" 
+                                    src="BrewDogLogo3.png">
                                 </img>
-                                <h1>BREWDOG BEERS</h1>
                             </Link>
                         </div>
                         <br></br>
