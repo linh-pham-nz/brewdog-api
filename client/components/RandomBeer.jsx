@@ -29,7 +29,7 @@ class RandomBeer extends React.Component {
     render() {
         return(
             <React.Fragment>
-                <div id="randomBeerSection">
+                <div className="sticky" id="randomBeerSection">
                     <button 
                         onClick={this.newRandomBeer} 
                         id="randomBeerButton">
