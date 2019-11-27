@@ -74,7 +74,7 @@ nav {
     text-align: right;
 }
 
-.sticky {
+div.sticky {
     position: sticky;
     top: 0;
 }
