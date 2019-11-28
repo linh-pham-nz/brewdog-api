@@ -4,6 +4,13 @@ https://punkapi.com/documentation/v2
 Example use of Punk API:
 https://codepen.io/fun/pen/qprmXV
 
-Future features
+Future features:
 - leave comment on particular beers using a FORM
 - blog of progress using database
+
+Current issues:
+- when randomBeerButton is sticky, loses button functionality
+- can't get nav links to display underneath Brew'd image logo
+- when displaying all beers, sometimes API calls do not sort properly, does not display all etc.
+have to refresh multiple times to display correctly
+- when beer title is too long, affects size of card and cards around it
