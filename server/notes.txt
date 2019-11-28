@@ -1,0 +1,9 @@
+Punk API docs:
+https://punkapi.com/documentation/v2
+
+Example use of Punk API:
+https://codepen.io/fun/pen/qprmXV
+
+Future features
+- leave comment on particular beers using a FORM
+- blog of progress using database
