@@ -62,11 +62,15 @@ class BeerList extends React.Component {
                     <div className="card-body">
                       <p className="card-title">{beer.name}</p>
                       <p className="card-text"><strong>ABV: </strong>{beer.abv}%</p>
+                      <p className="card-text"><strong>IBU: </strong>{beer.ibu}%</p>
                       <p className="card-text"><strong>First brewed: </strong>{beer.first_brewed}</p>
-                    <img
-                      className="card-img-bottom"
-                      src={beer.image_url === null ? "defaultPlaceholder.png" : beer.image_url}
-                    ></img>
+                      <img
+                        className="card-img-bottom"
+                        src={beer.image_url === null 
+                          ? "defaultPlaceholder.png" 
+                          : beer.image_url}
+                        alt={`image of ${beer.name}`}>                        
+                      </img>
                     </div>
                   </Link>
                 </div>

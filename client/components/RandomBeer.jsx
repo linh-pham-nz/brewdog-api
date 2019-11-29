@@ -44,25 +44,36 @@ class RandomBeer extends React.Component {
                                 width="120" 
                                 src={this.state.beer.image_url === null 
                                     ? "defaultPlaceholder.png" 
-                                    : this.state.beer.image_url}>
+                                    : this.state.beer.image_url}
+                                alt={`image of ${this.state.beer.name}`}>
                             </img>
                         </div>
                         <div className="col-xl-10 col-sm-8">
                             <h2>{this.state.beer.name}</h2>
-                            <dl>
-                                <dt>Tagline:</dt>
-                                <dd>{this.state.beer.tagline}</dd>
-                                <dt>Description:</dt>
-                                <dd>{this.state.beer.description}</dd>
-                                <dt>ABV:</dt>
-                                <dd>{this.state.beer.abv}</dd>
-                                <dt>First brewed:</dt>
-                                <dd>{this.state.beer.first_brewed}</dd>
-                                <dt>Food pairing:</dt>
-                                {this.state.food_pairing.map((foods, i) => (
-                                    <dd id="food-text" key={i}>{foods}</dd>
-                                ))}
-                            </dl>
+                            <div className="row">
+                                <div className="col-xl-6 col-sm-12">
+                                    <dl>
+                                        <dt>Tagline</dt>
+                                        <dd>{this.state.beer.tagline}</dd>
+                                        <dt>Description</dt>
+                                        <dd>{this.state.beer.description}</dd>
+                                        <dt>First brewed</dt>
+                                        <dd>{this.state.beer.first_brewed}</dd>
+                                    </dl>
+                                </div>
+                                <div className="col-xl-6 col-sm-12">
+                                    <dl>
+                                        <dt>ABV</dt>
+                                        <dd>{this.state.beer.abv}</dd>
+                                        <dt>IBU</dt>
+                                        <dd>{this.state.beer.ibu}</dd>
+                                        <dt>Food pairing</dt>
+                                        {this.state.food_pairing.map((foods, i) => (
+                                            <dd id="food-text" key={i}>- {foods}</dd>
+                                        ))}
+                                    </dl>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
