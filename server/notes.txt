@@ -7,6 +7,8 @@ https://codepen.io/fun/pen/qprmXV
 Future features:
 - leave comment on particular beers using a FORM
 - blog of progress using database
+- search function
+- dropdown menu on BeerList page for sorting e.g. by ABV
 
 Current issues:
 - when randomBeerButton is sticky, loses button functionality
