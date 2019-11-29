@@ -11,7 +11,8 @@ const Navbar = () => {
                             <Link to="/">
                                 <img 
                                     className="logo-image img-fluid" 
-                                    src="BrewDogLogo3.png">
+                                    src="BrewDogLogo3.png"
+                                    alt="Brew'd image logo">
                                 </img>
                             </Link>
                         </div>

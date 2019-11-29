@@ -33,7 +33,8 @@ class ChosenBeer extends React.Component {
                             width="120" 
                             src={this.state.beer.image_url === null 
                                 ? "defaultPlaceholder.png" 
-                                : this.state.beer.image_url}>
+                                : this.state.beer.image_url}
+                            alt={`image of ${this.state.beer.name}`}>
                         </img>
                     </div>
                     <div className="col-xl-10 col-sm-8">
