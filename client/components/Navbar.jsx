@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
     return (
         <React.Fragment>
-            <nav className="navbar navbar-expand-md navbar-light bg-light sticky-top">
+            <nav className="navbar navbar-expand-md navbar-light sticky-top">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="d-flex">
@@ -16,8 +16,7 @@ const Navbar = () => {
                                 </img>
                             </Link>
                         </div>
-                        <br></br>
-                        </div>
+                    </div>
                     <div className="row">
                         <div className="navbar-nav">
                             <Link className="nav-item nav-link active" to="/">Home</Link>
