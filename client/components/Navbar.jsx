@@ -16,8 +16,7 @@ const Navbar = () => {
                                 </img>
                             </Link>
                         </div>
-                        <br></br>
-                        </div>
+                    </div>
                     <div className="row">
                         <div className="navbar-nav">
                             <Link className="nav-item nav-link active" to="/">Home</Link>
