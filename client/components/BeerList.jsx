@@ -53,6 +53,16 @@ class BeerList extends React.Component {
   render () {
     return (
       <React.Fragment>
+        <div>
+          <form>
+            <select>
+              <optgroup label="Alphabetical">
+                <option selected>Alphabetical A-Z</option>
+                <option>Alphabetical Z-A</option>
+              </optgroup>
+            </select>
+          </form>
+        </div>
         <div className="row">
           {this.state.beers.map((beer, i) => {
             return (
