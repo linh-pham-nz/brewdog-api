@@ -55,13 +55,23 @@ class BeerList extends React.Component {
       <React.Fragment>
         <div>
           <form>
-            <select>
+            <label for="sortBeerOptions">Sort beers: </label>
+            <select id="sortBeerOptions">
               <optgroup label="Alphabetical">
-                <option defaultValue>Alphabetical A-Z</option>
-                <option>Alphabetical Z-A</option>
+                <option
+                  value="AlphabeticalA-Z">
+                    Alphabetical A-Z
+                </option>
+                <option
+                  value="AlphabeticalZ-A">
+                  Alphabetical Z-A
+                </option>
               </optgroup>
               <optgroup label="ABV">
-                <option>ABV Ascending</option>
+                <option
+                  name="AbvAscending">
+                    ABV Ascending
+                </option>
                 <option>ABV Descending</option>
               </optgroup>
               <optgroup label="Date First Brewed">
