@@ -4,6 +4,11 @@ class BeerSortForm extends React.Component {
     state = {
         value: "alphabeticalA-Z"
     }
+
+    handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(this.state.value)
+    }
     
     handleChange = (e) => {
         this.setState({
@@ -14,7 +19,7 @@ class BeerSortForm extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <label htmlFor="sortBeerOptions">Sort beers: </label>
                     <select id="sortBeerOptions" onChange={this.handleChange}>
                         <option value="alphabeticalA-Z">Alphabetical A-Z</option>
