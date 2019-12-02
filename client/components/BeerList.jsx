@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import BeerSortForm from './BeerSortForm'
+
 import { getBeersById1to80, 
          getBeersById81to160, 
          getBeersById161to240,
@@ -57,7 +59,6 @@ class BeerList extends React.Component {
           <form>
             <label htmlFor="sortBeerOptions">Sort beers: </label>
             <select id="sortBeerOptions">
-              {/* <optgroup label="Alphabetical"> */}
                 <option
                   value="AlphabeticalA-Z">
                     Alphabetical A-Z
@@ -66,8 +67,6 @@ class BeerList extends React.Component {
                   value="AlphabeticalZ-A">
                   Alphabetical Z-A
                 </option>
-              {/* </optgroup> */}
-              {/* <optgroup label="ABV"> */}
                 <option
                   value="AbvAscending">
                     ABV Ascending
@@ -76,8 +75,6 @@ class BeerList extends React.Component {
                   value="AbvAscending">
                     ABV Descending
                 </option>
-              {/* </optgroup> */}
-              {/* <optgroup label="IBU"> */}
                 <option
                   value="IbuAscending">
                     IBU Ascending
@@ -86,8 +83,6 @@ class BeerList extends React.Component {
                   value="IbuDescending">
                     IBU Descending
                 </option>
-              {/* </optgroup> */}
-              {/* <optgroup label="Date First Brewed"> */}
                 <option
                   value="brewedOldest">
                     Date First Brewed Oldest
@@ -96,8 +91,8 @@ class BeerList extends React.Component {
                   value="brewedLatest">
                     Date First Brewed Latest
                 </option>
-              {/* </optgroup> */}
             </select>
+            <input type="submit" value="Cheers" />
           </form>
         </div>
         <div className="row">
