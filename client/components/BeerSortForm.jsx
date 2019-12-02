@@ -1,13 +1,15 @@
 import React from 'react'
+// import { beers } from './BeerList'
 
 class BeerSortForm extends React.Component {
     state = {
-        value: "alphabeticalA-Z"
+        value: ''
     }
 
     handleSubmit = (e) => {
         e.preventDefault()
         console.log(this.state.value)
+        // console.log(this.props.beers)
     }
     
     handleChange = (e) => {
