@@ -43,7 +43,6 @@ class BeerList extends React.Component {
       .then(result => {
         const beerInfo1to80 = result.body
         allBeerInfo.push(...beerInfo1to80)
-        // allBeerInfo.sort((a, b) => (a.id > b.id) ? 1 : -1)
         allBeerInfo.sort((a, b) => (a.name > b.name) ? 1 : -1)
         console.log(allBeerInfo)
         this.setState({

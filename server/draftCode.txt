@@ -1,0 +1,50 @@
+class BeerList extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+        beers: []
+    }
+    this.getAllBeers = this.getAllBeers.bind(this)
+  }
+
+  componentDidMount () {
+
+      this.getAllBeers(allBeerInfo)
+      console.log(typeof allBeerInfo)
+        allBeerInfo.sort((a, b) => (a.name > b.name) ? 1 : -1)
+        console.log(allBeerInfo)
+        this.setState({
+          beers: allBeerInfo
+        
+      })
+      // console.log(this.setState)
+    }
+
+    getAllBeers() {
+
+      getBeersById321to400()
+        .then(result => {
+          const beerInfo321to400 = result.body
+          allBeerInfo.push(...beerInfo321to400)
+        })
+      getBeersById241to320()
+        .then(result => {
+          const beerInfo241to320 = result.body
+          allBeerInfo.push(...beerInfo241to320)
+        })  
+      getBeersById161to240()
+        .then(result => {
+          const beerInfo161to240 = result.body
+          allBeerInfo.push(...beerInfo161to240)
+        })
+      getBeersById81to160()
+        .then(result => {
+          const beerInfo81to160 = result.body
+          allBeerInfo.push(...beerInfo81to160)
+        })
+      getBeersById1to80()
+        .then(result => {
+          const beerInfo1to80 = result.body
+          allBeerInfo.push(...beerInfo1to80)
+        })
+    }
