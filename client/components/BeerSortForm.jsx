@@ -21,8 +21,8 @@ class BeerSortForm extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <form onSubmit={this.handleSubmit}>
-                    <label htmlFor="sortBeerOptions">Sort beers: </label>
+                <form id="sortBeerForm" onSubmit={this.handleSubmit}>
+                    <label id="sortBeerLabel" htmlFor="sortBeerOptions">Sort beers: </label>
                     <select id="sortBeerOptions" onChange={this.handleChange}>
                         <option value="alphabeticalA-Z">Alphabetical A-Z</option>
                         <option value="alphabeticalZ-A">Alphabetical Z-A</option>
@@ -33,7 +33,7 @@ class BeerSortForm extends React.Component {
                         <option value="brewedOldest">Date First Brewed Oldest</option>
                         <option value="brewedLatest">Date First Brewed Latest</option>
                     </select>
-                    <input type="submit" value="Cheers" />
+                    <input type="submit" value="Go!" />
                 </form>
             </React.Fragment>
         )
