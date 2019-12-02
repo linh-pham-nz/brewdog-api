@@ -33,7 +33,7 @@ class BeerSortForm extends React.Component {
                         <option value="brewedOldest">Date First Brewed Oldest</option>
                         <option value="brewedLatest">Date First Brewed Latest</option>
                     </select>
-                    <input type="submit" value="Go!" />
+                    <input type="submit" value="Go!" id="submitButton"/>
                 </form>
             </React.Fragment>
         )
