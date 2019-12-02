@@ -47,4 +47,6 @@ class BeerList extends React.Component {
           const beerInfo1to80 = result.body
           allBeerInfo.push(...beerInfo1to80)
         })
+        console.log(allBeerInfo.length)
+        return allBeerInfo
     }

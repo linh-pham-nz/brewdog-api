@@ -7,7 +7,8 @@ import { getBeersById1to80,
          getBeersById81to160, 
          getBeersById161to240,
          getBeersById241to320,
-         getBeersById321to400 } from '../apiClient'
+         getBeersById321to400 
+} from '../apiClient'
 
 class BeerList extends React.Component {
   constructor(props) {
