@@ -69,18 +69,33 @@ class BeerList extends React.Component {
               </optgroup>
               <optgroup label="ABV">
                 <option
-                  name="AbvAscending">
+                  value="AbvAscending">
                     ABV Ascending
                 </option>
-                <option>ABV Descending</option>
+                <option
+                  value="AbvAscending">
+                    ABV Descending
+                </option>
               </optgroup>
               <optgroup label="Date First Brewed">
-                <option>Date First Brewed Oldest</option>
-                <option>Date First Brewed Latest</option>
+                <option
+                  value="brewedOldest">
+                    Date First Brewed Oldest
+                  </option>
+                <option
+                  value="brewedLatest">
+                    Date First Brewed Latest
+                </option>
               </optgroup>
               <optgroup label="IBU">
-                <option>IBU Ascending</option>
-                <option>IBU Descending</option>
+                <option
+                  value="IbuAscending">
+                    IBU Ascending
+                </option>
+                <option
+                  value="IbuDescending">
+                    IBU Descending
+                </option>
               </optgroup>
             </select>
           </form>
