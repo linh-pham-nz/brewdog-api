@@ -1,12 +1,14 @@
 import React from 'react'
 
 class BeerSortForm extends React.Component {
+    state = {
+        value: "alphabeticalA-Z"
+    }
+    
     handleChange = (e) => {
-        const value = e.target.value
-        console.log(value)
-        // this.setState({
-
-        // })
+        this.setState({
+            value: e.target.value
+        })
     }
 
     render() {
@@ -25,7 +27,7 @@ class BeerSortForm extends React.Component {
                         <option value="brewedLatest">Date First Brewed Latest</option>
                     </select>
                     <input type="submit" value="Cheers" />
-            </form>
+                </form>
             </React.Fragment>
         )
     }
