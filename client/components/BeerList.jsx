@@ -55,9 +55,9 @@ class BeerList extends React.Component {
       <React.Fragment>
         <div>
           <form>
-            <label for="sortBeerOptions">Sort beers: </label>
+            <label htmlFor="sortBeerOptions">Sort beers: </label>
             <select id="sortBeerOptions">
-              <optgroup label="Alphabetical">
+              {/* <optgroup label="Alphabetical"> */}
                 <option
                   value="AlphabeticalA-Z">
                     Alphabetical A-Z
@@ -66,8 +66,8 @@ class BeerList extends React.Component {
                   value="AlphabeticalZ-A">
                   Alphabetical Z-A
                 </option>
-              </optgroup>
-              <optgroup label="ABV">
+              {/* </optgroup> */}
+              {/* <optgroup label="ABV"> */}
                 <option
                   value="AbvAscending">
                     ABV Ascending
@@ -76,18 +76,8 @@ class BeerList extends React.Component {
                   value="AbvAscending">
                     ABV Descending
                 </option>
-              </optgroup>
-              <optgroup label="Date First Brewed">
-                <option
-                  value="brewedOldest">
-                    Date First Brewed Oldest
-                  </option>
-                <option
-                  value="brewedLatest">
-                    Date First Brewed Latest
-                </option>
-              </optgroup>
-              <optgroup label="IBU">
+              {/* </optgroup> */}
+              {/* <optgroup label="IBU"> */}
                 <option
                   value="IbuAscending">
                     IBU Ascending
@@ -96,7 +86,17 @@ class BeerList extends React.Component {
                   value="IbuDescending">
                     IBU Descending
                 </option>
-              </optgroup>
+              {/* </optgroup> */}
+              {/* <optgroup label="Date First Brewed"> */}
+                <option
+                  value="brewedOldest">
+                    Date First Brewed Oldest
+                  </option>
+                <option
+                  value="brewedLatest">
+                    Date First Brewed Latest
+                </option>
+              {/* </optgroup> */}
             </select>
           </form>
         </div>
