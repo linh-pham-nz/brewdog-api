@@ -56,6 +56,24 @@ nav {
     margin-bottom: 0px;
 }
 
+/* BeerSortForm styling */
+
+#sortBeerForm {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#sortBeerLabel {
+    font-weight: bold;
+    font-size: 1.5em;
+    padding-right: 8px;
+}
+
+#submitButton {
+    margin-left: 8px;
+    border-radius: 5px;
+}
+
 /* ChosenBeer styling */
 
 #chosenBeerImg {

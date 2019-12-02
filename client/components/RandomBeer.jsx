@@ -64,7 +64,7 @@ class RandomBeer extends React.Component {
                                 <div className="col-xl-6 col-sm-12">
                                     <dl>
                                         <dt>ABV</dt>
-                                        <dd>{this.state.beer.abv}</dd>
+                                        <dd>{this.state.beer.abv}%</dd>
                                         <dt>IBU</dt>
                                         <dd>{this.state.beer.ibu}</dd>
                                         <dt>Food pairing</dt>

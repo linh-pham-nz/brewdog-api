@@ -1,11 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import BeerSortForm from './BeerSortForm'
+
 import { getBeersById1to80, 
          getBeersById81to160, 
          getBeersById161to240,
          getBeersById241to320,
-         getBeersById321to400 } from '../apiClient'
+         getBeersById321to400 
+} from '../apiClient'
 
 class BeerList extends React.Component {
   constructor(props) {
@@ -41,7 +44,6 @@ class BeerList extends React.Component {
       .then(result => {
         const beerInfo1to80 = result.body
         allBeerInfo.push(...beerInfo1to80)
-        // allBeerInfo.sort((a, b) => (a.id > b.id) ? 1 : -1)
         allBeerInfo.sort((a, b) => (a.name > b.name) ? 1 : -1)
         console.log(allBeerInfo)
         this.setState({
@@ -53,6 +55,7 @@ class BeerList extends React.Component {
   render () {
     return (
       <React.Fragment>
+        <BeerSortForm />
         <div className="row">
           {this.state.beers.map((beer, i) => {
             return (
@@ -62,7 +65,7 @@ class BeerList extends React.Component {
                     <div className="card-body">
                       <p className="card-title">{beer.name}</p>
                       <p className="card-text"><strong>ABV: </strong>{beer.abv}%</p>
-                      <p className="card-text"><strong>IBU: </strong>{beer.ibu}%</p>
+                      <p className="card-text"><strong>IBU: </strong>{beer.ibu}</p>
                       <p className="card-text"><strong>First brewed: </strong>{beer.first_brewed}</p>
                       <img
                         className="card-img-bottom"
