@@ -55,7 +55,7 @@ class BeerList extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <BeerSortForm />
+        <BeerSortForm beersState={this.state.beers}/>
         <div className="row">
           {this.state.beers.map((beer, i) => {
             return (
