@@ -16,3 +16,6 @@ Current issues:
 - when displaying all beers, sometimes API calls do not sort properly, does not display all etc.
 have to refresh multiple times to display correctly
 - when beer title is too long, affects size of card and cards around it
+
+To Do:
+- add Redux - getting complicated with passing state around
