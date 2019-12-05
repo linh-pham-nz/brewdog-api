@@ -50,6 +50,13 @@ nav {
     font-weight: bold;
     font-size: 1.5em;
     margin-bottom: 0px;
+    /* CODE BELOW IS FOR LIMITING CARD TITLE */
+    /* display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 3.0em;
+    line-height: 1.5em; */
 }
 
 .card-text {
