@@ -1,5 +1,4 @@
 import React from 'react'
-// import { beers } from './BeerList'
 
 class BeerSortForm extends React.Component {
     state = {
@@ -8,8 +7,9 @@ class BeerSortForm extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        console.log(this.state.value)
-        // console.log(this.props.beers)
+        if(this.state.value === "abvAscending") {
+            console.log(this.props.beersState.sort((a, b) => a.abv - b.abv))
+        }
     }
     
     handleChange = (e) => {
@@ -41,3 +41,5 @@ class BeerSortForm extends React.Component {
 }
 
 export default BeerSortForm
+
+// console.log(this.props.beersState.sort((a, b) => (a.name > b.name) ? -1 : 1))
